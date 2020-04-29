@@ -1,0 +1,121 @@
+<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+
+<nav id="navbar">
+  <header>HTML Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+    <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+    <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+    <li><a class="nav-link" href="#Anatomy_of_an_HTML_document">Anatomy of an HTML document</a></li>
+    <li><a class="nav-link" href="#Applying_CSS_and_Javascript_to_HTML">Applying CSS and JavaScript to HTML</a> </li>
+    <li><a class="nav-link" href="#Summary">Summary</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="What_is_HTML?">
+    <header>What is HTML?</header>
+    <article>
+      <p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way.</p>
+
+      <p>At its heart, HTML is a fairly simple language made up of elements, which can be applied to pieces of text to give them different meaning in a document (Is it a paragraph? Is it a bulleted list? Is it part of a table?), structure a document into logical sections (Does it have a header? Three columns of content? A navigation menu?), and embed content such as images and videos into a page.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Anatomy_of_an_HTML_element">
+    <header>Anatomy of an HTML element</header>
+    <article>
+      <p><img alt="" src="https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png" style="display: block; height: 200px; margin: 0px auto; width: 550px;"></p>
+
+      <p>The main parts of the element are:</p>
+      <ul>
+        <li>The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.</li>
+        <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error and can lead to strange results.</li>
+        <li>The content: This is the content of the element, which in this case is just text.</li>
+        <li>The element: The opening tag plus the closing tag plus the content equals the element.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Attributes">
+    <header>Attributes</header>
+    <article>
+      <p>Elements can also have attributes, which look like this:</p>
+
+      <p><img alt="" src="https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png" style="display: block; height: 100px; margin: 0px auto; width: 650px;"></p>
+
+      <p>Attributes contain extra information about the element that you don't want to appear in the actual content. In this case, the <code>class</code> attribute allows you to give the element an identifying name, that can be used later to target the element with style information and other things.</p>
+
+      <p>An attribute should have:</p>
+
+      <ul>
+        <li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes).</li>
+        <li>The attribute name, followed by an equal sign.</li>
+        <li>An attribute value, with opening and closing quote marks wrapped around it.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Anatomy_of_an_HTML_document">
+    <header>Anatomy of an HTML document</header>
+    <article>
+      <p>Now we'll look at how individual elements are combined to form an entire HTML page:</p>
+
+      <pre class="brush: html line-numbers language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>My test page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>This is my page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      <p>Here we have:</p>
+
+      <ol>
+        <li><code>&lt;!DOCTYPE html&gt;</code>: The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. They used to look something like this:
+
+          <pre class="line-numbers language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+          However, these days no one really cares about them, and they are really just a historical artifact that needs to be included for everything to work right.&nbsp;<code>&lt;!DOCTYPE html&gt;</code> is the shortest string of characters that counts as a valid doctype; that's all you really need to know.</li>
+        <li><code>&lt;html&gt;&lt;/html&gt;</code>: The <a href="#" title="The HTML <html> element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element."><code>&lt;html&gt;</code></a> element. This element wraps all the content on the entire page, and is sometimes known as the root element.</li>
+        <li><code>&lt;head&gt;&lt;/head&gt;</code>: The <a href="#" title="The HTML <head> element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets."><code>&lt;head&gt;</code></a> element. This element acts as a container for all the stuff you want to include on the HTML page, that <em>isn't</em> the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more. You'll learn more about this in the next article of the series.</li>
+        <li><code>&lt;meta charset="utf-8"&gt;</code>: This element specifies the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later.</li>
+        <li><code>&lt;title&gt;&lt;/title&gt;</code>: The <a href="#" title="The HTML Title element (<title>) defines the document's title that is shown in a browser's title bar or a page's tab."><code>&lt;title&gt;</code></a> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in, and is used to describe the page when you bookmark/favorite it.</li>
+        <li><code>&lt;body&gt;&lt;/body&gt;</code>: The <a href="#" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document."><code>&lt;body&gt;</code></a> element. This contains <em>all</em> the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.</li>
+      </ol>
+    </article>
+  </section>
+  <section class="main-section" id="Applying_CSS_and_Javascript_to_HTML">
+    <header>Applying CSS and JavaScript to HTML</header>
+    <article>
+      <p>Just about all websites you'll use in the modern day will employ CSS to make them look cool, and JavaScript to power interactive functionality, such as video players, maps, games, and more. These are most commonly applied to a web page using the <code>&lt;link&gt;</code> element and the <code>&lt;script&gt;</code> element, respectively.</p>
+
+      <ul>
+        <li>The <code>&lt;link&gt;</code> element always goes inside the head of your document. This takes two attributes, rel="stylesheet", which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file:</li>
+
+        <pre class="brush: html line-numbers language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-css-file.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+        <li>The <code>&lt;script&gt;</code> element does not have to go in the head; in fact, often it is better to put it at the bottom of the document body (just before the closing <code>&lt;/body&gt;</code> tag), to make sure that all the HTML content has been read by the browser before it tries to apply JavaScript to it (if JavaScript tries to access an element that doesn't yet exist, the browser will throw an error.)</li>
+
+        <pre class="brush: html line-numbers language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-js-file.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+      </ul>
+      <p><b>Note:</b> The <code>&lt;script&gt;</code> element may look like an empty element, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the <code>&lt;script&gt;</code> element.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Summary">
+    <header>Summary</header>
+    <article>
+      <p>You've reached the end of the article — I hope you enjoyed your tour of the very basics of HTML! At this point you should understand what the language looks like, how it works at a basic level, and be able to write a few elements and attributes. Good luck on your journey to web page development!</p>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>All the documentation in this page is taken from
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">MDN</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
